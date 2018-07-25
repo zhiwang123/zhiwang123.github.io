@@ -7,9 +7,25 @@ div {
    margin-left: 40px;
    margin-right: 40px;
    position: static;
+   font-family: "Times New Roman", Times, serif;
 }
 .center {
    text-align: center;
+}
+.button {
+   background-color: #FFFFFF;
+   border: none;
+   cursor:pointer;
+   color: blue;
+   text-decoration: underline;
+   font-family: "Times New Roman", Times, serif;
+   font-size: 1em;
+}
+.abstract {
+   border-left: solid black;
+   border-left-width: thin;
+   margin-left: 40px;
+   padding: 25px;
 }
 </style>
 </head>
@@ -17,10 +33,10 @@ div {
 <body>
 <div>
 <div class="center">
-<h2>Zhi Wang's Homepage</h2>
+<h1>Zhi Wang's Homepage</h1>
 </div>
 
-<p>I am a first year Ph.D. student in Computer Science at the University of California, San Diego (UCSD). I am advised by <a href="//scungao.github.io">Prof. Sicun Gao</a>.</p>
+<p>I am a first-year Ph.D. student in Computer Science at the University of California, San Diego (UCSD). I am advised by <a href="//scungao.github.io">Prof. Sicun Gao</a>.</p>
 <p>I am broadly interested in developing algorithmic techniques for reasoning and learning tasks in Artificial Intelligence (AI). Currently, my research interests are in constraint reasoning, combinatorial search, planning and scheduling, reinforcement learning, and many other subfields of AI.
 <p>Before joining UCSD, I obtained my B.S. degree in Computer Science from the University of Southern California, where I worked with <a href="//tkskwork.org">Prof. T. K. Satish Kumar</a> and <a href="//idm-lab.org">Prof. Sven Koenig</a>.</p>
 
@@ -29,15 +45,64 @@ div {
 <h3>Publications</h3>
 <ul>
 <li>
-   <b>Zhi Wang</b>, Liron Cohen, Sven Koenig and T. K. Satish Kumar. 2018. The Factored Shortest Path Problem and Its Applications in Robotics. In <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling (ICAPS-2018)</i>.
-</li>
-<br>
+   <b>Zhi Wang</b>, Liron Cohen, Sven Koenig and T. K. Satish Kumar. 2018. <b>The Factored Shortest Path Problem and Its Applications in Robotics</b>. In <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling (ICAPS-2018)</i>.<br>
+   <button class = "button" onclick="displayText('icaps18abstract')">[abstract]</button>
+   <a href="papers/icaps18.pdf">[pdf]</a>
+   <button class = "button" onclick="displayText('icaps18bibtex')">[bibtex]</button>
+   <div class = "abstract" id="icaps18abstract" style = "display:none" >
+   Many real-world combinatorial problems exhibit structure in the way in which their variables interact. Such structure can be exploited in the form of "factors" for representational as well as computational benefits. Factored representations are extensively used in probabilistic reasoning, constraint satisfaction, planning, and decision theory. In this paper, we formulate the <i>factored shortest path problem</i> (FSPP) on a collection of constraints interpreted as factors of a highdimensional map.We show that the FSPP is not only a generalization of the regular shortest path problem but also particularly relevant to robotics.We develop factored-space heuristics for A* and prove that they are admissible and consistent. We provide experimental results on both random and handcrafted instances as well as on an example robotics domain to show that A* with factored-space heuristics outperforms A* with the Manhattan Distance heuristic in many cases.
+   </div>
+   <div id="icaps18bibtex" style = "display:none">
+   <pre>
+   @inproceedings{wang2018,
+      author = {Zhi Wang and Liron Cohen and Sven Koenig and T. K. Satish Kumar},
+      title = {The Factored Shortest Path Problem and Its Applications in Robotics},
+      booktitle = {Proceedings of the Twenty-Eighth International Conference on Automated Planning and Scheduling (ICAPS)},
+      pages = {527--531},
+      year = {2018}
+   }
+   </pre>
+   </div>
+</li><br>
 <li>
-   T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers and Craig A. Knoblock. 2018. Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing. In <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI-2018)</i>.
-</li>
-<br>
+   T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers and Craig A. Knoblock. 2018. <b>Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing</b>. In <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI-2018)</i>.<br>
+   <button class = "button" onclick="displayText('aaai18abstract')">[abstract]</button>
+   <a href="papers/aaai18.pdf">[pdf]</a>
+   <button class = "button" onclick="displayText('aaai18bibtex')">[bibtex]</button>
+   <div class = "abstract" id="aaai18abstract" style = "display:none">
+   We study load scheduling of simple temporal networks (STNs) under dynamic pricing of resources. We are given a set of processes and a set of simple temporal constraints between their execution times, i.e., an STN. Each process uses a certain amount of resource for execution. The unit price of the resource is a function of time, f(t). The goal is to find a schedule of a given STN that trades off makespan minimization against cost minimization within a user-specified suboptimality bound. We provide a polynomial-time algorithm for solving the load scheduling problem when f(t) is piecewise constant. This has important applications in many real-world domains including the smart home and smart grid domains. We then study the dependency of the unit price of the resource on time as well as the total demand at that time. This leads to a further characterization of tractable, NP-hard, and conjectured tractable cases.
+   </div>
+   <div id="aaai18bibtex" style = "display:none">
+   <pre>
+   @inproceedings{kumar2018a,
+      author = {Kumar, T. K. Satish and Wang, Zhi and Kumar, Anoop and Rogers, Craig Milo and Knoblock,Craig A.},
+      title = {Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing},
+      booktitle = {Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence (AAAI)},
+      pages = {6227--6236},
+      year = {2018}
+   }
+   </pre>
+   </div>
+</li><br>
 <li>
-   T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers and Craig A. Knoblock. 2018. On the Linear Programming Duals of Temporal Reasoning Problems. In <i>Proceedings of the 15th International Symposium on Artificial Intelligence and Mathematics (ISAIM-2018)</i>.
+   T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers and Craig A. Knoblock. 2018. <b>On the Linear Programming Duals of Temporal Reasoning Problems</b>. In <i>Proceedings of the 15th International Symposium on Artificial Intelligence and Mathematics (ISAIM-2018)</i>.<br>
+   <button class = "button" onclick="displayText('isaim18abstract')">[abstract]</button>
+   <a href="papers/isaim18.pdf">[pdf]</a>
+   <button class = "button" onclick="displayText('isaim18bibtex')">[bibtex]</button>
+   <div class = "abstract" id="isaim18abstract" style = "display:none">
+   Temporal reasoning problems occur in many application domains of Artificial Intelligence; therefore, it is important for us to develop algorithms for solving them efficiently. While some problems like Simple Temporal Problems are known to be tractable, some other problems like Disjunctive Temporal Problems are known to be NP-hard. In this paper, we provide a Linear Programming (LP) <i>duality</i> perspective on temporal reasoning problems. In many cases, we show that their LP duals are the commonly-studied <i>flow</i> problems in Graph Theory. Using the general theory of LP duality, we develop novel algorithms for efficiently solving several temporal reasoning problems. We also show that other previously-known efficient methods in temporal reasoning also fit into this perspective of LP duality.
+   </div>
+   <div sid="isaim18bibtex" style = "display:none">
+   <pre>
+   @inproceedings{kumar2018b,
+      author = {Kumar, T. K. Satish and Wang, Zhi and Kumar, Anoop and Rogers, Craig Milo and Knoblock,Craig A.},
+      title = {On the Linear Programming Duals of Temporal Reasoning Problems},
+      booktitle = {International Symposium on Artificial Intelligence and Mathematics (ISAIM)},
+      year = {2018},
+      url = {"http://isaim2018.cs.virginia.edu/papers/ISAIM2018_TK_Satish_Kumar_etal.pdf"}
+   }
+   </pre>
+   </div>
 </li>
 </ul>
 
@@ -50,5 +115,19 @@ Email: zhiwang at eng dot ucsd dot edu<br>
 dblp</p>
 
 </div>
+
+
+<script>
+function displayText(id) {
+    var x = document.getElementById(id);
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+</script>
+
+
 </body>
 </html>
