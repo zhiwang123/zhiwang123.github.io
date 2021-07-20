@@ -48,6 +48,9 @@ pre {
       padding-left: 10px;
    }
 }
+p.small {
+  font-variant: small-caps;
+}
 </style>
 </head>
 
@@ -58,21 +61,27 @@ pre {
 </div>
 
 <p>I am a third-year Ph.D. student in Computer Science at the University of California San Diego (UCSD). I am advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Prof. Kamalika Chaudhuri</a>.</p>
-<p>I am broadly interested in developing algorithmic techniques for learning and reasoning tasks in Artificial Intelligence (AI), especially for sequential decision making. Currently, I work on online learning, contextual bandits, and reinforcement learning. I have also worked on combinatorial search, planning, and scheduling, among many other subfields of AI.
+<p>I am broadly interested in developing algorithmic techniques for learning and reasoning tasks in Artificial Intelligence (AI), especially for sequential decision making. Currently, I work on multi-armed and contextual bandits, and reinforcement learning. I have also worked on combinatorial search, planning, and scheduling, among many other subfields of AI.
 <p>Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">Prof. T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Prof. Sven Koenig</a>.</p>
 
 <hr>
 
-<!--
+
 <h3>Preprints</h3>
 <ul>
 <li>
-.
+    Chicheng Zhang, <b>Zhi Wang</b>.
+    <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. 2021.<br>
+	<button onclick="displayText('multitask_rl_abstract')">[abstract]</button>
+    <a href="https://arxiv.org/abs/2107.08622">[arXiv]</a><br>
+    <blockquote id="multitask_rl_abstract" style = "display:none" >
+	We study multi-task reinforcement learning (RL) in tabular episodic Markov decision processes (MDPs). We formulate a heterogeneous multi-player RL problem, in which a group of players concurrently face similar but not necessarily identical MDPs, with a goal of improving their collective performance through inter-player information sharing. We design and analyze an algorithm based on the idea of model transfer, and provide gap-dependent and gap-independent upper and lower bounds that characterize the intrinsic complexity of the problem.
+    </blockquote>
 </li>
 </ul>
 
 <hr>
--->
+
     
 
 <h3>Publications</h3>
@@ -80,8 +89,12 @@ pre {
 <li>
     <b>Zhi Wang&#42</b>, Chicheng Zhang&#42, Manish Kumar Singh, Laurel D. Riek, and Kamalika Chaudhuri. <!--2020.-->
     <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. In <i>Proceedings of the 24th International Conference on 
-Artificial Intelligence and Statistics (AISTATS-2021)</i>.<br>
-    <a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
+Artificial Intelligence and Statistics (AISTATS-2021)</i>. A preliminary version of this work appeared in the Workshop on Real World Experiment Design and Active Learning at ICML 2020.<br>
+	<button onclick="displayText('aistats21abstract')">[abstract]</button>
+	<a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
+    <blockquote id="aistats21abstract" style = "display:none" >
+    In many real-world applications, multiple agents seek to learn how to perform highly related yet slightly different tasks in an online bandit learning protocol. We formulate this problem as the &epsilon;-multi-player multi-armed bandit problem, in which a set of players concurrently interact with a set of arms, and for each arm, the reward distributions for all players are similar but not necessarily identical. We develop an upper confidence bound-based algorithm, <p class="small" style="display:inline">RobustAgg</p>(&epsilon;), that adaptively aggregates rewards collected by different players. In the setting where an upper bound on the pairwise similarities of reward distributions between players is known, we achieve instance-dependent regret guarantees that depend on the amenability of information sharing across players. We complement these upper bounds with nearly matching lower bounds. In the setting where pairwise similarities are unknown, we provide a lower bound, as well as an algorithm that trades off minimax regret guarantees for adaptivity to unknown similarity structure.
+    </blockquote>
     &#42These authors contributed equally.<br>
 </li><br>
 <li>
@@ -152,7 +165,7 @@ Artificial Intelligence and Statistics (AISTATS-2021)</i>.<br>
 <p>Office: EBU3B 4154 @ UCSD<br>
 Email: zhiwang at eng dot ucsd dot edu<br>
 <a href="//scholar.google.com/citations?user=6WLJjCIAAAAJ&hl=en">Google Scholar</a><br>
-<!--<a href="//dblp.uni-trier.de/pers/hd/w/Wang_0013:Zhi">dblp</a></p>-->
+<a href="//dblp.uni-trier.de/pers/hd/w/Wang_0013:Zhi">dblp</a></p>
 
 </div>
 
