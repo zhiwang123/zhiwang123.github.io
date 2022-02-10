@@ -68,12 +68,21 @@ I am currently working on theoretically characterizing the benefits of domain ad
 
 <hr>
 
-<!--
-<h3>Preprints</h3>
+
+<h3>Manuscripts</h3>
 <ul>
+<li>
+	<b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
+	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>.<br>
+	<button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
+	<!--<a href="https://zwang.org">[arXiv]</a><br>-->
+	<blockquote id="multitask_ts_abstract" style = "display:none" >
+	We study the problem of online multi-task learning where the tasks are performed within similar but not necessarily identical multi-armed bandit environments. In particular, we study how a learner can improve its overall performance across multiple related tasks through robust transfer of knowledge. While an upper confidence bound (UCB)-based algorithm has recently been shown to achieve nearly-optimal performance guarantees in a setting where all tasks are solved concurrently, it remains unclear whether Thompson sampling (TS) algorithms, which have superior empirical performance in general, share similar theoretical properties. In this work, we present a TS-type algorithm for a more general online multi-task learning protocol, which extends the concurrent setting. We provide its frequentist analysis and prove that it is also nearly-optimal using a novel concentration inequality for multi-task data aggregation at random stopping times. Finally, we evaluate the algorithm on synthetic data and show that the TS-type algorithm enjoys superior empirical performance in comparison with the UCB-based algorithm and a baseline algorithm that performs TS for each individual task without transfer.
+	</blockquote>
+	</li><br>
 </ul>
 <hr>
--->
+
     
 
 <h3>Publications</h3>
@@ -81,9 +90,9 @@ I am currently working on theoretically characterizing the benefits of domain ad
 <li>
     Chicheng Zhang, <b>Zhi Wang</b>.
     <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. In <i>Proceedings of the 35th Conference on Neural Information Processing Systems (NeurIPS-2021)</i>. A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
-	<button onclick="displayText('multitask_rl_abstract')">[abstract]</button>
+	<button onclick="displayText('neurips21_abstract')">[abstract]</button>
     <a href="https://arxiv.org/abs/2107.08622">[arXiv]</a><br>
-    <blockquote id="multitask_rl_abstract" style = "display:none" >
+    <blockquote id="neurips21_abstract" style = "display:none" >
 	We study multi-task reinforcement learning (RL) in tabular episodic Markov decision processes (MDPs). We formulate a heterogeneous multi-player RL problem, in which a group of players concurrently face similar but not necessarily identical MDPs, with a goal of improving their collective performance through inter-player information sharing. We design and analyze an algorithm based on the idea of model transfer, and provide gap-dependent and gap-independent upper and lower bounds that characterize the intrinsic complexity of the problem.
     </blockquote>
 </li><br>
