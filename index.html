@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-219977848-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-219977848-1');
-</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zhi Wang's Homepage</title>
 <style>
@@ -78,24 +69,24 @@ I am currently working on theoretically characterizing the benefits of domain ad
 <hr>
 
 
-<h3>Manuscripts</h3>
+<!--<h3>Manuscripts</h3>
+<ul>
+</ul>
+<hr>
+-->
+    
+
+<h3>Publications</h3>
 <ul>
 <li>
 	<b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
-	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>.<br>
+	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. To appear at the 39th International Conference on Machine Learning (ICML-2022). <br>
 	<button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
 	<!--<a href="https://zwang.org">[arXiv]</a><br>-->
 	<blockquote id="multitask_ts_abstract" style = "display:none" >
 	We study the problem of online multi-task learning where the tasks are performed within similar but not necessarily identical multi-armed bandit environments. In particular, we study how a learner can improve its overall performance across multiple related tasks through robust transfer of knowledge. While an upper confidence bound (UCB)-based algorithm has recently been shown to achieve nearly-optimal performance guarantees in a setting where all tasks are solved concurrently, it remains unclear whether Thompson sampling (TS) algorithms, which have superior empirical performance in general, share similar theoretical properties. In this work, we present a TS-type algorithm for a more general online multi-task learning protocol, which extends the concurrent setting. We provide its frequentist analysis and prove that it is also nearly-optimal using a novel concentration inequality for multi-task data aggregation at random stopping times. Finally, we evaluate the algorithm on synthetic data and show that the TS-type algorithm enjoys superior empirical performance in comparison with the UCB-based algorithm and a baseline algorithm that performs TS for each individual task without transfer.
 	</blockquote>
-	</li><br>
-</ul>
-<hr>
-
-    
-
-<h3>Publications</h3>
-<ul>
+</li><br>
 <li>
     Chicheng Zhang, <b>Zhi Wang</b>.
     <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. In <i>Proceedings of the 35th Conference on Neural Information Processing Systems (NeurIPS-2021)</i>. A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
