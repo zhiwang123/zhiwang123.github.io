@@ -6,7 +6,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhi Wang's Homepage</title>
-<style>
+  <script type="text/javascript"
+    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+  <style>
   .outer-container {
     margin: 0 20%;
   }
@@ -103,7 +106,7 @@
       height: auto;
       display: block;
       margin: 0 auto;
-    },
+    }
     .text {
       flex: none;
       width: 100%;
@@ -139,11 +142,13 @@
 
   <div class="container">
     <div class="text">
-      <p>I am a final-year Ph.D. candidate in Computer Science at the University of California San Diego (UCSD), advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Prof. Kamalika Chaudhuri</a>. <span style="color: red;">I am on the job market. Please <a href="mailto:zhiwang@ucsd.edu" style="color: #800080;">let me know</a> if you have any leads!</span></p>
+      <p>I am a final-year Ph.D. candidate in Computer Science at the University of California San Diego (UCSD), advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Kamalika Chaudhuri</a>. 
+        <!-- <span style="color: red;">I am on the job market. Please <a href="mailto:zhiwang@ucsd.edu" style="color: #800080;">let me know</a> if you have any leads!</span> --> 
+      </p>
       
       <p>I am primarily interested in topics of <b>interactive machine learning</b> and <b>sequential decision making</b>, such as online learning, bandits, and reinforcement learning. In particular, I aim to design and analyze efficient and robust algorithms that make use of data from <b>diverse</b> sources, such as a large pool of human users or non-stationary environments.
 
-      <p>Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">Prof. T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Prof. Sven Koenig</a> on combinatorial search, planning and scheduling, and constraint satisfaction, among other subfields of artificial intelligence.</p>
+      <p>Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Sven Koenig</a> on combinatorial search, planning and scheduling, and constraint satisfaction, among other subfields of artificial intelligence.</p>
     </div>
     <img class="photo" src="photo.jpg" alt="photo">
   </div>
@@ -151,11 +156,16 @@
   <hr>
 
   <div id="research">
-  <h3>Manuscript</h3>
+  <h3>Preprints</h3>
   <ul>
     <li>
     <b>Zhi Wang</b>, Geelon So, and Ramya Korlakai Vinayak.
-    <b>Learning Metric from Limited Pairwise Preference Comparisons</b>. In preparation.<br>
+    <b>Metric Learning from Limited Pairwise Preference Comparisons</b>. <br>
+    <button onclick="displayText('metric_learning_abstract')">[abstract]</button>
+  	<a href="https://arxiv.org/abs/2403.19629">[arXiv]</a><br>
+  	<blockquote id="metric_learning_abstract" style = "display:none" >
+    We study metric learning from preference comparisons under the ideal point model, in which a user prefers an item over another if it is closer to their latent ideal item. These items are embedded into \( \mathbb{R}^d \) equipped with an unknown Mahalanobis distance shared across users. While recent work shows that it is possible to simultaneously recover the metric and ideal items given \( O(d) \) pairwise comparisons per user, in practice we often have a limited budget of \( o(d) \) comparisons. We study whether the metric can still be recovered, even though it is known that learning individual ideal items is now no longer possible. We show that in general, \( o(d) \) comparisons reveals no information about the metric, even with infinitely many users. However, when comparisons are made over items that exhibit low-dimensional structure, each user can contribute to learning the metric restricted to a low-dimensional subspace so that the metric can be jointly identified. We present a divide-and-conquer approach that achieves this, and provide theoretical recovery guarantees and empirical validation.
+  	</blockquote>
   </li>
   </ul>
 
@@ -165,7 +175,7 @@
   <ul>
   <li>
   	<b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
-  	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. In <i>Proceedings of the 39th International Conference on Machine Learning (ICML-2022)</i>. <br>
+  	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. <i>Proceedings of the 39th International Conference on Machine Learning (ICML-2022)</i>. <br>
   	<button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
   	<a href="https://arxiv.org/abs/2206.08556">[arXiv]</a><br>
   	<blockquote id="multitask_ts_abstract" style = "display:none" >
@@ -174,7 +184,7 @@
   </li><br>
   <li>
       Chicheng Zhang, <b>Zhi Wang</b>.
-      <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. In <i>Proceedings of the 35th Conference on Neural Information Processing Systems (NeurIPS-2021)</i>. A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
+      <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. <i>Advances in Neural Information Processing Systems 34  (NeurIPS-2021)</i>. A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
   	<button onclick="displayText('neurips21_abstract')">[abstract]</button>
       <a href="https://arxiv.org/abs/2107.08622">[arXiv]</a><br>
       <blockquote id="neurips21_abstract" style = "display:none" >
@@ -182,8 +192,8 @@
       </blockquote>
   </li><br>
   <li>
-      <b>Zhi Wang&#42</b>, Chicheng Zhang&#42, Manish Kumar Singh, Laurel D. Riek, and Kamalika Chaudhuri. <!--2020.-->
-      <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. In <i>Proceedings of the 24th International Conference on 
+      <b>Zhi Wang&#42</b>, Chicheng Zhang&#42, Manish Kumar Singh, Laurel D. Riek, and Kamalika Chaudhuri.
+      <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. <i>Proceedings of the 24th International Conference on 
   Artificial Intelligence and Statistics (AISTATS-2021)</i>. A preliminary version of this work appeared in the Workshop on Real World Experiment Design and Active Learning at ICML-2020. &#42These authors contributed equally.<br>
   	<button onclick="displayText('aistats21abstract')">[abstract]</button>
   	<a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
@@ -192,64 +202,28 @@
       </blockquote>
   </li><br>
   <li>
-     <b>Zhi Wang</b>, Liron Cohen, Sven Koenig, and T. K. Satish Kumar. <!--2018.--> <b>The Factored Shortest Path Problem and Its Applications in Robotics</b>. In <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling (ICAPS-2018)</i>.<br>
+     <b>Zhi Wang</b>, Liron Cohen, Sven Koenig, and T. K. Satish Kumar. <b>The Factored Shortest Path Problem and Its Applications in Robotics</b>. <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling (ICAPS-2018)</i>.<br>
      <button onclick="displayText('icaps18abstract')">[abstract]</button>
      <a href="papers/icaps18.pdf">[pdf]</a>
-     <button onclick="displayText('icaps18bibtex')">[bibtex]</button>
      <blockquote id="icaps18abstract" style = "display:none" >
      Many real-world combinatorial problems exhibit structure in the way in which their variables interact. Such structure can be exploited in the form of "factors" for representational as well as computational benefits. Factored representations are extensively used in probabilistic reasoning, constraint satisfaction, planning, and decision theory. In this paper, we formulate the <i>factored shortest path problem</i> (FSPP) on a collection of constraints interpreted as factors of a highdimensional map.We show that the FSPP is not only a generalization of the regular shortest path problem but also particularly relevant to robotics.We develop factored-space heuristics for A* and prove that they are admissible and consistent. We provide experimental results on both random and handcrafted instances as well as on an example robotics domain to show that A* with factored-space heuristics outperforms A* with the Manhattan Distance heuristic in many cases.
      </blockquote>
-     <div id="icaps18bibtex" style = "display:none">
-     <pre>
-     @inproceedings{wang2018,
-        author = {Zhi Wang and Liron Cohen and Sven Koenig and T. K. Satish Kumar},
-        title = {The Factored Shortest Path Problem and Its Applications in Robotics},
-        booktitle = {Proceedings of the Twenty-Eighth International Conference on Automated Planning and Scheduling (ICAPS)},
-        pages = {527--531},
-        year = {2018}
-     }
-     </pre>
-     </div>
   </li><br>
   <li>
-     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <!--2018.--> <b>Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing</b>. In <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI-2018)</i>.<br>
+     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <b>Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing</b>. <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI-2018)</i>.<br>
      <button onclick="displayText('aaai18abstract')">[abstract]</button>
      <a href="papers/aaai18.pdf">[pdf]</a>
-     <button onclick="displayText('aaai18bibtex')">[bibtex]</button>
      <blockquote id="aaai18abstract" style = "display:none">
-     We study load scheduling of simple temporal networks (STNs) under dynamic pricing of resources. We are given a set of processes and a set of simple temporal constraints between their execution times, i.e., an STN. Each process uses a certain amount of resource for execution. The unit price of the resource is a function of time, f(t). The goal is to find a schedule of a given STN that trades off makespan minimization against cost minimization within a user-specified suboptimality bound. We provide a polynomial-time algorithm for solving the load scheduling problem when f(t) is piecewise constant. This has important applications in many real-world domains including the smart home and smart grid domains. We then study the dependency of the unit price of the resource on time as well as the total demand at that time. This leads to a further characterization of tractable, NP-hard, and conjectured tractable cases.
+     We study load scheduling of simple temporal networks (STNs) under dynamic pricing of resources. We are given a set of processes and a set of simple temporal constraints between their execution times, i.e., an STN. Each process uses a certain amount of resource for execution. The unit price of the resource is a function of time, \( f(t) \). The goal is to find a schedule of a given STN that trades off makespan minimization against cost minimization within a user-specified suboptimality bound. We provide a polynomial-time algorithm for solving the load scheduling problem when \( f(t) \) is piecewise constant. This has important applications in many real-world domains including the smart home and smart grid domains. We then study the dependency of the unit price of the resource on time as well as the total demand at that time. This leads to a further characterization of tractable, NP-hard, and conjectured tractable cases.
      </blockquote>
-     <div id="aaai18bibtex" style = "display:none">
-     <pre>
-     @inproceedings{kumar2018a,
-        author = {Kumar, T. K. Satish and Wang, Zhi and Kumar, Anoop and Rogers, Craig Milo and Knoblock,Craig A.},
-        title = {Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing},
-        booktitle = {Proceedings of the Thirty-Second AAAI Conference on Artificial Intelligence (AAAI)},
-        pages = {6227--6236},
-        year = {2018}
-     }
-     </pre>
-     </div>
   </li><br>
   <li>
-     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <!--2018.--> <b>On the Linear Programming Duals of Temporal Reasoning Problems</b>. In <i>Proceedings of the 15th International Symposium on Artificial Intelligence and Mathematics (ISAIM-2018)</i>.<br>
+     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <b>On the Linear Programming Duals of Temporal Reasoning Problems</b>. The 15th International Symposium on Artificial Intelligence and Mathematics (ISAIM-2018).<br>
      <button onclick="displayText('isaim18abstract')">[abstract]</button>
      <a href="papers/isaim18.pdf">[pdf]</a>
-     <button onclick="displayText('isaim18bibtex')">[bibtex]</button>
      <blockquote id="isaim18abstract" style = "display:none">
      Temporal reasoning problems occur in many application domains of Artificial Intelligence; therefore, it is important for us to develop algorithms for solving them efficiently. While some problems like Simple Temporal Problems are known to be tractable, some other problems like Disjunctive Temporal Problems are known to be NP-hard. In this paper, we provide a Linear Programming (LP) <i>duality</i> perspective on temporal reasoning problems. In many cases, we show that their LP duals are the commonly-studied <i>flow</i> problems in Graph Theory. Using the general theory of LP duality, we develop novel algorithms for efficiently solving several temporal reasoning problems. We also show that other previously-known efficient methods in temporal reasoning also fit into this perspective of LP duality.
      </blockquote>
-     <div id="isaim18bibtex" style = "display:none">
-     <pre>
-     @inproceedings{kumar2018b,
-        author = {Kumar, T. K. Satish and Wang, Zhi and Kumar, Anoop and Rogers, Craig Milo and Knoblock,Craig A.},
-        title = {On the Linear Programming Duals of Temporal Reasoning Problems},
-        booktitle = {Proceedings of the Fifteenth International Symposium on Artificial Intelligence and Mathematics (ISAIM)},
-        year = {2018},
-        url = {"http://isaim2018.cs.virginia.edu/papers/ISAIM2018_TK_Satish_Kumar_etal.pdf"}
-     }
-     </pre>
-     </div>
   </li>
   </ul>
   </div> 
@@ -260,6 +234,7 @@
   <h3>Teaching</h3>
   I was a teaching assistant for the following classes at UCSD:<br>
   <ul>
+  <li>DSE 210, Statistics and Probability [Winter 2024]</li> 
   <li>CSE 151A, Introduction to Machine Learning [Winter 2023, Summer 2023, Fall 2023]</li>
   <li>CSE 251A, Principles of Machine Learning: Learning Algorithms [Winter 2021, Winter 2022]</li>
   <li>CSE 291, Topics in Search and Optimization [Winter 2020]</li>
@@ -270,7 +245,7 @@
 
   <div id="service">
   <h3>Professional Service</h3>
-  I was a reviewer for AISTATS (2021, 2022, 2023), ICML (2022, 2023), and NeurIPS (2021, 2022).</p>
+  I was a reviewer for AISTATS (2021-2023), ICML (2022-2024), and NeurIPS (2021-2022).</p>
   </div>
   <hr>
 
