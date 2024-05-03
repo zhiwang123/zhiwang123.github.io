@@ -143,13 +143,14 @@
 
   <div class="container">
     <div class="text">
-      <p>I am a final-year Ph.D. candidate in Computer Science at the University of California San Diego (UCSD), advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Kamalika Chaudhuri</a>. 
+      <p>I am a postdoctoral research associate at the University of Wisconsin-Madison, working with <a href="https://ramyakv.github.io">Ramya Korlakai Vinayak</a>. 
         <!-- <span style="color: red;">I am on the job market. Please <a href="mailto:zhiwang@ucsd.edu" style="color: #800080;">let me know</a> if you have any leads!</span> --> 
       </p>
       
-      <p>I am primarily interested in topics of <b>interactive machine learning</b> and <b>sequential decision making</b>, such as online learning, bandits, and reinforcement learning. In particular, I aim to design and analyze efficient and robust algorithms that make use of data from <b>diverse</b> sources, such as a large pool of human users or non-stationary environments.
+      <p>I am primarily interested in topics of <b>interactive machine learning</b> and <b>sequential decision making</b>. In particular, I aim to design and analyze efficient and robust algorithms that make use of data from <b>diverse</b> sources, such as a large pool of human users or non-stationary environments.
 
-      <p>Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Sven Koenig</a> on combinatorial search, planning and scheduling, and constraint satisfaction, among other subfields of artificial intelligence.</p>
+      <p>I received my Ph.D. in Computer Science from the University of California San Diego (UCSD), advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Kamalika Chaudhuri</a>. 
+        Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Sven Koenig</a> on combinatorial search, planning and scheduling, and constraint satisfaction, among other subfields of artificial intelligence.</p>
     </div>
     <img class="photo" src="photo.jpg" alt="photo">
   </div>
@@ -157,11 +158,15 @@
   <hr>
 
   <div id="research">
-  <h3>Preprints</h3>
+  <!-- <h3>Preprints</h3> -->
+  <!-- <hr> -->
+
+  <h3>Publications</h3>
   <ul>
     <li>
     <b>Zhi Wang</b>, Geelon So, and Ramya Korlakai Vinayak.
-    <b>Metric Learning from Limited Pairwise Preference Comparisons</b>. <br>
+    <b>Metric Learning from Limited Pairwise Preference Comparisons</b>. <i>Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence</i> (UAI-2024). To appear.
+    <br>
     <button onclick="displayText('metric_learning_abstract')">[abstract]</button>
   	<a href="https://arxiv.org/abs/2403.19629">[arXiv]</a><br>
   	<blockquote id="metric_learning_abstract" style = "display:none" >
@@ -169,14 +174,10 @@
   	</blockquote>
   </li>
   </ul>
-
-  <hr>
-
-  <h3>Publications</h3>
   <ul>
   <li>
   	<b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
-  	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. <i>Proceedings of the 39th International Conference on Machine Learning (ICML-2022)</i>. <br>
+  	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. <i>Proceedings of the 39th International Conference on Machine Learning</i> (ICML-2022). <br>
   	<button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
   	<a href="https://arxiv.org/abs/2206.08556">[arXiv]</a><br>
   	<blockquote id="multitask_ts_abstract" style = "display:none" >
@@ -185,7 +186,7 @@
   </li><br>
   <li>
       Chicheng Zhang, <b>Zhi Wang</b>.
-      <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. <i>Advances in Neural Information Processing Systems 34  (NeurIPS-2021)</i>. A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
+      <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. <i>Advances in Neural Information Processing Systems 34</i> (NeurIPS-2021). A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
   	<button onclick="displayText('neurips21_abstract')">[abstract]</button>
       <a href="https://arxiv.org/abs/2107.08622">[arXiv]</a><br>
       <blockquote id="neurips21_abstract" style = "display:none" >
@@ -194,8 +195,7 @@
   </li><br>
   <li>
       <b>Zhi Wang&#42</b>, Chicheng Zhang&#42, Manish Kumar Singh, Laurel D. Riek, and Kamalika Chaudhuri.
-      <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. <i>Proceedings of the 24th International Conference on 
-  Artificial Intelligence and Statistics (AISTATS-2021)</i>. A preliminary version of this work appeared in the Workshop on Real World Experiment Design and Active Learning at ICML-2020. &#42These authors contributed equally.<br>
+      <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. <i>Proceedings of the 24th International Conference on Artificial Intelligence and Statistics</i> (AISTATS-2021). A preliminary version of this work appeared in the Workshop on Real World Experiment Design and Active Learning at ICML-2020. &#42These authors contributed equally.<br>
   	<button onclick="displayText('aistats21abstract')">[abstract]</button>
   	<a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
       <blockquote id="aistats21abstract" style = "display:none" >
@@ -203,7 +203,7 @@
       </blockquote>
   </li><br>
   <li>
-     <b>Zhi Wang</b>, Liron Cohen, Sven Koenig, and T. K. Satish Kumar. <b>The Factored Shortest Path Problem and Its Applications in Robotics</b>. <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling (ICAPS-2018)</i>.<br>
+     <b>Zhi Wang</b>, Liron Cohen, Sven Koenig, and T. K. Satish Kumar. <b>The Factored Shortest Path Problem and Its Applications in Robotics</b>. <i>Proceedings of the 28th International Conference on Automated Planning and Scheduling</i> (ICAPS-2018).<br>
      <button onclick="displayText('icaps18abstract')">[abstract]</button>
      <a href="papers/icaps18.pdf">[pdf]</a>
      <blockquote id="icaps18abstract" style = "display:none" >
@@ -211,7 +211,7 @@
      </blockquote>
   </li><br>
   <li>
-     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <b>Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing</b>. <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence (AAAI-2018)</i>.<br>
+     T. K. Satish Kumar, <b>Zhi Wang</b>, Anoop Kumar, Craig Milo Rogers, and Craig A. Knoblock. <b>Load Scheduling of Simple Temporal Networks Under Dynamic Resource Pricing</b>. <i>Proceedings of the 32nd AAAI Conference on Artificial Intelligence</i> (AAAI-2018).<br>
      <button onclick="displayText('aaai18abstract')">[abstract]</button>
      <a href="papers/aaai18.pdf">[pdf]</a>
      <blockquote id="aaai18abstract" style = "display:none">
