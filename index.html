@@ -6,12 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zhi Wang's Homepage</title>
-  <script type="text/javascript"
-    src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
   <style>
+  body, div {
+    font-family: "Computer Modern Serif", serif;
+  }
+  a {
+    color: #105e8a;
+  }
   .outer-container {
-    margin: 0 20%;
+    margin: 0 21.5%;
   }
   .container {
     width: 100%;
@@ -61,7 +66,7 @@
     background-color: #FFFFFF;
     border: none;
     cursor:pointer;
-    color: blue;
+    color: #105e8a;
     text-decoration: underline;
     font-family: "Times New Roman", Times, serif;
     font-size: 100%;
@@ -80,8 +85,13 @@
     list-style-type: disc;
     padding-left: 2.5%;
   }
+  @media only screen and (min-width: 800px) and (max-width: 1050px) {
+    .outer-container {
+      margin: 0 13.5%;
+    }
+  }
   @media only screen and (max-width: 800px) {
-    body {
+    body, div {
       text-align: left;
       font-size: 13.5px;
     }
@@ -103,7 +113,7 @@
     }
     .photo {
       flex: none;
-      max-width: 30%;
+      max-width: 25%;
       height: auto;
       display: block;
       margin: 0 auto;
@@ -146,9 +156,8 @@
       <p>I am a postdoctoral research associate at the University of Wisconsin-Madison, working with <a href="https://ramyakv.github.io">Ramya Korlakai Vinayak</a>. 
         <!-- <span style="color: red;">I am on the job market. Please <a href="mailto:zhiwang@ucsd.edu" style="color: #800080;">let me know</a> if you have any leads!</span> --> 
       </p>
-      
-      <p>I am primarily interested in <b>interactive machine learning</b> and <b>sequential decision making</b>, especially with data from heterogeneous sources.
-      Most recently, I have been working on developing mathematical foundations for <b>aligning</b> large language models with diverse human values and preferences.</p>
+
+      <p>My main research interests are in machine learning, with a focus on problems that involve heterogeneity, adaptability, or both. This includes studying how models learn and generalize across diverse tasks, potentially over time, within non-traditional paradigms such as interactive learning and sequential decision-making.</p>      
 
       <p>I received my Ph.D. in Computer Science from the University of California San Diego (UCSD), where I was advised by <a href="http://cseweb.ucsd.edu/~kamalika/">Kamalika Chaudhuri</a>. 
         Before joining UCSD, I obtained my B.S. in Computer Science from the University of Southern California, where I worked with <a href="https://tkskwork.org">T. K. Satish Kumar</a> and <a href="http://idm-lab.org">Sven Koenig</a> on combinatorial search, planning and scheduling, and constraint satisfaction, among others.</p>
@@ -162,55 +171,69 @@
   <!-- <h3>Preprints</h3> -->
   <!-- <hr> -->
 
+  <!-- <h3>Manuscripts</h3> -->
+  <!-- <hr> -->
+
   <h3>Publications</h3>
   <ul>
-    <li>
-    Thang Duong, <b>Zhi Wang</b>, Chicheng Zhang.
-    <b>Beyond Task Diversity: Provable Representation Transfer for Sequential Multitask Linear Bandits</b>. To appear in <i>Advances in Neural Information Processing Systems 37</i> (NeurIPS-2024).
-    <!-- <br>
-    <button onclick="displayText('beyond_task_diversity_abstract')">[abstract]</button>
-  	<a href="https://arxiv.org/abs/2403.19629">[arXiv]</a><br>
-  	<blockquote id="metric_learning_abstract" style = "display:none" >
-    We study metric learning from preference comparisons under the ideal point model, in which a user prefers an item over another if it is closer to their latent ideal item. These items are embedded into \( \mathbb{R}^d \) equipped with an unknown Mahalanobis distance shared across users. While recent work shows that it is possible to simultaneously recover the metric and ideal items given \( O(d) \) pairwise comparisons per user, in practice we often have a limited budget of \( o(d) \) comparisons. We study whether the metric can still be recovered, even though it is known that learning individual ideal items is now no longer possible. We show that in general, \( o(d) \) comparisons reveals no information about the metric, even with infinitely many users. However, when comparisons are made over items that exhibit low-dimensional structure, each user can contribute to learning the metric restricted to a low-dimensional subspace so that the metric can be jointly identified. We present a divide-and-conquer approach that achieves this, and provide theoretical recovery guarantees and empirical validation.
-  	</blockquote> -->
+  <li>
+    Daiwei Chen, Yi Chen, Aniket Rege, <b>Zhi Wang</b>, Ramya Korlakai Vinayak.
+    <b>PAL: Sample-Efficient Personalized Reward Modeling for Pluralistic Alignment</b>. <i>The 13th International Conference on Learning Representations</i> (ICLR-2025).
+    <br>
+    <button onclick="displayText('pal_abstract')">[abstract]</button>
+    <a href="https://openreview.net/forum?id=1kFDrYCuSu">[OpenReview]</a><br>
+    <blockquote id="pal_abstract" style = "display:none" >
+    Foundation models trained on internet-scale data benefit from extensive alignment to human preferences before deployment. However, existing methods typically assume a homogeneous preference shared by all individuals, overlooking the diversity inherent in human values. In this work, we propose a general reward modeling framework for pluralistic alignment (PAL), which incorporates diverse preferences from the ground up. PAL has a modular design that leverages commonalities across users while catering to individual personalization, enabling efficient few-shot localization of preferences for new users. Extensive empirical evaluation demonstrates that PAL matches or outperforms state-of-the-art methods on both text-to-text and text-to-image tasks: on Reddit TL;DR Summary, PAL is 1.7% more accurate for seen users and 36% more accurate for unseen users compared to the previous best method, with 100× less parameters. On Pick-a-Pic v2, PAL is 2.5% more accurate than the best method with 156× fewer learned parameters. Finally, we provide theoretical analysis for generalization of rewards learned via PAL framework showcasing the reduction in number of samples needed per user.    </blockquote>
   </li>
   </ul>
   <ul>
-    <li>
+  <li>
+    Thang Duong, <b>Zhi Wang</b>, Chicheng Zhang.
+    <b>Beyond Task Diversity: Provable Representation Transfer for Sequential Multitask Linear Bandits</b>. <i>Advances in Neural Information Processing Systems 37</i> (NeurIPS-2024).
+    <br>
+    <button onclick="displayText('beyond_task_diversity_abstract')">[abstract]</button>
+    <a href="https://arxiv.org/abs/2501.13390">[arXiv]</a><br>
+    <blockquote id="beyond_task_diversity_abstract" style = "display:none" >
+    We study lifelong learning in linear bandits, where a learner interacts with a sequence of linear bandit tasks whose parameters lie in an \( m \)-dimensional subspace of \( \mathbb{R}^d \), thereby sharing a low-rank representation. Current literature typically assumes that the tasks are <i>diverse</i>, i.e., their parameters uniformly span the \( m \)-dimensional subspace. This assumption allows the low-rank representation to be learned before all tasks are revealed, which can be unrealistic in real-world applications. In this work, we present the first nontrivial result for sequential multi-task linear bandits without the task diversity assumption. We develop an algorithm that efficiently learns and transfers low-rank representations. When facing \( N \) tasks, each played over \( \tau \) rounds, our algorithm achieves a regret guarantee of \( \tilde{O} (Nm \sqrt{\tau} + N^{\frac{2}{3}} \tau^{\frac{2}{3}} d m^{\frac13} + Nd^2 + \tau m d ) \) under the ellipsoid action set assumption. This result can significantly improve upon the baseline of \( \tilde{O}  (Nd \sqrt{\tau} ) \) that does not leverage the low-rank structure when the number of tasks \( N \) is sufficiently large and \( m \ll d \). We also demonstrate empirically on synthetic data that our algorithm outperforms baseline algorithms, which rely on the task diversity assumption. 
+    </blockquote>
+  </li>
+  </ul>
+  <ul>
+  <li>
     <b>Zhi Wang</b>, Geelon So, and Ramya Korlakai Vinayak.
     <b>Metric Learning from Limited Pairwise Preference Comparisons</b>. <i>Proceedings of the 40th Conference on Uncertainty in Artificial Intelligence</i> (UAI-2024).
     <br>
     <button onclick="displayText('metric_learning_abstract')">[abstract]</button>
-  	<a href="https://arxiv.org/abs/2403.19629">[arXiv]</a><br>
-  	<blockquote id="metric_learning_abstract" style = "display:none" >
+    <a href="https://arxiv.org/abs/2403.19629">[arXiv]</a><br>
+    <blockquote id="metric_learning_abstract" style = "display:none" >
     We study metric learning from preference comparisons under the ideal point model, in which a user prefers an item over another if it is closer to their latent ideal item. These items are embedded into \( \mathbb{R}^d \) equipped with an unknown Mahalanobis distance shared across users. While recent work shows that it is possible to simultaneously recover the metric and ideal items given \( O(d) \) pairwise comparisons per user, in practice we often have a limited budget of \( o(d) \) comparisons. We study whether the metric can still be recovered, even though it is known that learning individual ideal items is now no longer possible. We show that in general, \( o(d) \) comparisons reveals no information about the metric, even with infinitely many users. However, when comparisons are made over items that exhibit low-dimensional structure, each user can contribute to learning the metric restricted to a low-dimensional subspace so that the metric can be jointly identified. We present a divide-and-conquer approach that achieves this, and provide theoretical recovery guarantees and empirical validation.
-  	</blockquote>
+    </blockquote>
   </li>
   </ul>
   <ul>
   <li>
-  	<b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
-  	<b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. <i>Proceedings of the 39th International Conference on Machine Learning</i> (ICML-2022). <br>
-  	<button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
-  	<a href="https://arxiv.org/abs/2206.08556">[arXiv]</a><br>
-  	<blockquote id="multitask_ts_abstract" style = "display:none" >
-  	We study the problem of online multi-task learning where the tasks are performed within similar but not necessarily identical multi-armed bandit environments. In particular, we study how a learner can improve its overall performance across multiple related tasks through robust transfer of knowledge. While an upper confidence bound (UCB)-based algorithm has recently been shown to achieve nearly-optimal performance guarantees in a setting where all tasks are solved concurrently, it remains unclear whether Thompson sampling (TS) algorithms, which have superior empirical performance in general, share similar theoretical properties. In this work, we present a TS-type algorithm for a more general online multi-task learning protocol, which extends the concurrent setting. We provide its frequentist analysis and prove that it is also nearly-optimal using a novel concentration inequality for multi-task data aggregation at random stopping times. Finally, we evaluate the algorithm on synthetic data and show that the TS-type algorithm enjoys superior empirical performance in comparison with the UCB-based algorithm and a baseline algorithm that performs TS for each individual task without transfer.
-  	</blockquote>
+    <b>Zhi Wang</b>, Chicheng Zhang, and Kamalika Chaudhuri.
+    <b>Thompson Sampling for Robust Transfer in Multi-Task Bandits</b>. <i>Proceedings of the 39th International Conference on Machine Learning</i> (ICML-2022). <br>
+    <button onclick="displayText('multitask_ts_abstract')">[abstract]</button>
+    <a href="https://arxiv.org/abs/2206.08556">[arXiv]</a><br>
+    <blockquote id="multitask_ts_abstract" style = "display:none" >
+    We study the problem of online multi-task learning where the tasks are performed within similar but not necessarily identical multi-armed bandit environments. In particular, we study how a learner can improve its overall performance across multiple related tasks through robust transfer of knowledge. While an upper confidence bound (UCB)-based algorithm has recently been shown to achieve nearly-optimal performance guarantees in a setting where all tasks are solved concurrently, it remains unclear whether Thompson sampling (TS) algorithms, which have superior empirical performance in general, share similar theoretical properties. In this work, we present a TS-type algorithm for a more general online multi-task learning protocol, which extends the concurrent setting. We provide its frequentist analysis and prove that it is also nearly-optimal using a novel concentration inequality for multi-task data aggregation at random stopping times. Finally, we evaluate the algorithm on synthetic data and show that the TS-type algorithm enjoys superior empirical performance in comparison with the UCB-based algorithm and a baseline algorithm that performs TS for each individual task without transfer.
+    </blockquote>
   </li><br>
   <li>
       Chicheng Zhang, <b>Zhi Wang</b>.
       <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. <i>Advances in Neural Information Processing Systems 34</i> (NeurIPS-2021). A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021.<br>
-  	<button onclick="displayText('neurips21_abstract')">[abstract]</button>
+    <button onclick="displayText('neurips21_abstract')">[abstract]</button>
       <a href="https://arxiv.org/abs/2107.08622">[arXiv]</a><br>
       <blockquote id="neurips21_abstract" style = "display:none" >
-  	We study multi-task reinforcement learning (RL) in tabular episodic Markov decision processes (MDPs). We formulate a heterogeneous multi-player RL problem, in which a group of players concurrently face similar but not necessarily identical MDPs, with a goal of improving their collective performance through inter-player information sharing. We design and analyze an algorithm based on the idea of model transfer, and provide gap-dependent and gap-independent upper and lower bounds that characterize the intrinsic complexity of the problem.
+    We study multi-task reinforcement learning (RL) in tabular episodic Markov decision processes (MDPs). We formulate a heterogeneous multi-player RL problem, in which a group of players concurrently face similar but not necessarily identical MDPs, with a goal of improving their collective performance through inter-player information sharing. We design and analyze an algorithm based on the idea of model transfer, and provide gap-dependent and gap-independent upper and lower bounds that characterize the intrinsic complexity of the problem.
       </blockquote>
   </li><br>
   <li>
       <b>Zhi Wang&#42</b>, Chicheng Zhang&#42, Manish Kumar Singh, Laurel D. Riek, and Kamalika Chaudhuri.
       <b>Multitask Bandit Learning through Heterogeneous Feedback Aggregation</b>. <i>Proceedings of the 24th International Conference on Artificial Intelligence and Statistics</i> (AISTATS-2021). A preliminary version of this work appeared in the Workshop on Real World Experiment Design and Active Learning at ICML-2020. &#42These authors contributed equally.<br>
-  	<button onclick="displayText('aistats21abstract')">[abstract]</button>
-  	<a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
+    <button onclick="displayText('aistats21abstract')">[abstract]</button>
+    <a href="https://arxiv.org/abs/2010.15390">[arXiv]</a><br>
       <blockquote id="aistats21abstract" style = "display:none" >
       In many real-world applications, multiple agents seek to learn how to perform highly related yet slightly different tasks in an online bandit learning protocol. We formulate this problem as the &epsilon;-multi-player multi-armed bandit problem, in which a set of players concurrently interact with a set of arms, and for each arm, the reward distributions for all players are similar but not necessarily identical. We develop an upper confidence bound-based algorithm, <p class="small" style="display:inline">RobustAgg</p>(&epsilon;), that adaptively aggregates rewards collected by different players. In the setting where an upper bound on the pairwise similarities of reward distributions between players is known, we achieve instance-dependent regret guarantees that depend on the amenability of information sharing across players. We complement these upper bounds with nearly matching lower bounds. In the setting where pairwise similarities are unknown, we provide a lower bound, as well as an algorithm that trades off minimax regret guarantees for adaptivity to unknown similarity structure.
       </blockquote>
@@ -260,7 +283,7 @@
   <div id="service">
   <h3>Professional Service</h3>
   <ul>
-  <li>Conference reviewer: AISTATS (2021-24), ICML (2022-24), NeurIPS (2021-22, 2024)</li>
+  <li>Conference reviewer: AISTATS (2021-23, 2025), ICML (2022-25), NeurIPS (2021-22, 2024), ICLR (2025), COLT (2025)</li>
   <li>Journal reviewer: TMLR (2024)</li>
   </ul>
   </div>
@@ -270,8 +293,8 @@
   <h3>Contact</h3>
   <p>Office: ECB M1002<br>
   Email: zhi [dot] wang [at] wisc [dot] edu<br>
-  <a href="https://scholar.google.com/citations?user=6WLJjCIAAAAJ&hl=en">Google Scholar</a>,
-  <a href="https://dblp.uni-trier.de/pers/hd/w/Wang_0013:Zhi">dblp</a></p>
+  <a href="https://scholar.google.com/citations?user=6WLJjCIAAAAJ&hl=en">Google Scholar</a>
+  <!-- <a href="https://dblp.uni-trier.de/pers/hd/w/Wang_0013:Zhi">dblp</a></p> -->
   </div>
 
 </div>
