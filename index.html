@@ -16,7 +16,7 @@
     color: #105e8a;
   }
   .outer-container {
-    margin: 0 21.5%;
+    margin: 0 21%;
   }
   .container {
     width: 100%;
@@ -168,8 +168,21 @@
   <hr>
 
   <div id="research">
-  <!-- <h3>Preprints</h3> -->
-  <!-- <hr> -->
+  
+  <h3>Preprints</h3>
+  <ul>
+  <li>
+    <b>Zhi Wang</b>, Chicheng Zhang, and Ramya Korlakai Vinayak.
+    <b>Bridging Lifelong and Multi-Task Representation Learning via Algorithm and Complexity Measure</b>.
+    <br>
+    <button onclick="displayText('lifelong_learning_abstract')">[abstract]</button>
+    <a href="https://arxiv.org/abs/2511.01847">[arXiv]</a><br>
+    <blockquote id="lifelong_learning_abstract" style = "display:none" >
+    In lifelong learning, a learner faces a sequence of tasks with shared structure and aims to identify and leverage it to accelerate learning. We study the setting where such structure is captured by a common representation of data. Unlike multi-task learning or learning-to-learn, where tasks are available upfront to learn the representation, lifelong learning requires the learner to make use of its existing knowledge while continually gathering partial information in an <em>online</em> fashion. In this paper, we consider a generalized framework of lifelong representation learning. We propose a simple algorithm that uses multi-task empirical risk minimization as a subroutine and establish a sample complexity bound based on a new notion we introduce—the <em>task-eluder dimension</em>. Our result applies to a wide range of learning problems involving general function classes. As concrete examples, we instantiate our result on classification and regression tasks under noise. 
+  </li>
+  </ul>  
+
+  <hr>
 
   <!-- <h3>Manuscripts</h3> -->
   <!-- <hr> -->
@@ -177,7 +190,7 @@
   <h3>Selected Publications</h3>
   <ul>
   <li>
-    Daiwei Chen, Yi Chen, Aniket Rege, <b>Zhi Wang</b>, Ramya Korlakai Vinayak.
+    Daiwei Chen, Yi Chen, Aniket Rege, <b>Zhi Wang</b>, and Ramya Korlakai Vinayak.
     <b>PAL: Sample-Efficient Personalized Reward Modeling for Pluralistic Alignment</b>. <i>The 13th International Conference on Learning Representations</i> (ICLR-2025).
     <br>
     <button onclick="displayText('pal_abstract')">[abstract]</button>
@@ -188,7 +201,7 @@
   </ul>
   <ul>
   <li>
-    Thang Duong, <b>Zhi Wang</b>, Chicheng Zhang.
+    Thang Duong, <b>Zhi Wang</b>, and Chicheng Zhang.
     <b>Beyond Task Diversity: Provable Representation Transfer for Sequential Multitask Linear Bandits</b>. <i>Advances in Neural Information Processing Systems 37</i> (NeurIPS-2024).
     <br>
     <button onclick="displayText('beyond_task_diversity_abstract')">[abstract]</button>
@@ -221,7 +234,7 @@
     </blockquote>
   </li><br>
   <li>
-      Chicheng Zhang, <b>Zhi Wang</b>.
+      Chicheng Zhang and <b>Zhi Wang</b>.
       <b>Provably Efficient Multi-Task Reinforcement Learning with Model Transfer</b>. <i>Advances in Neural Information Processing Systems 34</i> (NeurIPS-2021). 
       <!-- A shorter version of this work appeared in the Workshop on Reinforcement Learning Theory at ICML-2021. -->
       <br>
@@ -274,7 +287,7 @@
   <div id="teaching">
   <h3>Teaching</h3>
   <ul>
-  <li>Instructor, ECE/CS/ME 539: Introduction to Artificial Neural Networks, UW-Madison [<a href="https://canvas.wisc.edu/courses/454920">Summer 2025</a>, Fall 2025] </li> 
+  <li>Instructor, ECE/CS/ME 539: Introduction to Artificial Neural Networks, UW-Madison [<a href="https://canvas.wisc.edu/courses/454920">Summer 2025</a>, <a href="https://canvas.wisc.edu/courses/465127">Fall 2025</a>] </li> 
   </ul>
 
   <!-- I was a teaching assistant for the following classes at UCSD:<br>
@@ -291,7 +304,7 @@
   <div id="service">
   <h3>Professional Service</h3>
   <ul>
-  <li>Conference reviewer: AISTATS (2021-23, 2025), ICML (2022-25), NeurIPS (2021-22, 2024-25), ICLR (2025), COLT (2025)</li>
+  <li>Conference reviewer: AISTATS (2021-23, 2025-26), ICML (2022-25), NeurIPS (2021-22, 2024-25), ICLR (2025), COLT (2025)</li>
   <li>Journal reviewer: TMLR (2024-25)</li>
   </ul>
   </div>
